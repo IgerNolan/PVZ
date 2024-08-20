@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbcm6c31t1tm5"]
+
+[ext_resource type="Script" path="res://script/util/阳光栏.gd" id="1_3qisb"]
+[ext_resource type="Texture2D" uid="uid://b5m56lkfjorl2" path="res://res/ico/SunBank.png" id="2_63koo"]
+
+[node name="阳光栏" type="Node2D"]
+script = ExtResource("1_3qisb")
+
+[node name="SunBank" type="Sprite2D" parent="."]
+position = Vector2(0, 5)
+texture = ExtResource("2_63koo")
+centered = false
+offset = Vector2(-1, -6)
+
+[node name="Lbl_SunNum" type="Label" parent="SunBank"]
+offset_left = 9.0
+offset_top = 55.0
+offset_right = 66.0
+offset_bottom = 78.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,72 @@
+[gd_scene load_steps=14 format=3 uid="uid://dg33g83uge20p"]
+
+[ext_resource type="Texture2D" uid="uid://docegxc0d2a2j" path="res://res/reanim/PeaShooter_backleaf_righttip.png" id="1_0k0is"]
+[ext_resource type="Texture2D" uid="uid://rcxmgtrk27on" path="res://res/reanim/PeaShooter_stalk_top.png" id="1_05kaf"]
+[ext_resource type="Script" path="res://script/plant/PeaShooter.gd" id="1_8b2o6"]
+[ext_resource type="Texture2D" uid="uid://eceutxoel3hd" path="res://res/reanim/PeaShooter_backleaf_lefttip.png" id="2_auc5c"]
+[ext_resource type="Texture2D" uid="uid://bagruim3mcctg" path="res://res/reanim/PeaShooter_stalk_bottom.png" id="2_qmeo2"]
+[ext_resource type="Texture2D" uid="uid://bpqer1dwrytjt" path="res://res/reanim/PeaShooter_Head.png" id="3_ew5cx"]
+[ext_resource type="Texture2D" uid="uid://ctpebb4wl8anf" path="res://res/reanim/PeaShooter_backleaf.png" id="3_foprs"]
+[ext_resource type="Texture2D" uid="uid://cnnwl153vtae3" path="res://res/reanim/PeaShooter_sprout.png" id="4_ou7ei"]
+[ext_resource type="Texture2D" uid="uid://cis08pcc1khra" path="res://res/reanim/PeaShooter_mouth.png" id="5_1ywgg"]
+[ext_resource type="Texture2D" uid="uid://buiwcqd5ebcmu" path="res://res/reanim/PeaShooter_frontleaf.png" id="9_i4m0d"]
+[ext_resource type="Texture2D" uid="uid://c0vjbv7q5wcv0" path="res://res/reanim/PeaShooter_frontleaf_lefttip.png" id="10_1hktw"]
+[ext_resource type="Texture2D" uid="uid://bmroy3xdpgwgw" path="res://res/reanim/PeaShooter_frontleaf_righttip.png" id="11_wautb"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jt4bf"]
+b = Vector2(489, 0)
+
+[node name="Pea_shooter" type="Node2D"]
+script = ExtResource("1_8b2o6")
+
+[node name="backleaf" type="Sprite2D" parent="."]
+texture = ExtResource("1_0k0is")
+offset = Vector2(20, -15)
+
+[node name="backleaf2" type="Sprite2D" parent="."]
+texture = ExtResource("2_auc5c")
+offset = Vector2(-18, -14)
+
+[node name="backleaf3" type="Sprite2D" parent="."]
+texture = ExtResource("3_foprs")
+offset = Vector2(0, -10)
+
+[node name="stalk" type="Sprite2D" parent="."]
+texture = ExtResource("1_05kaf")
+offset = Vector2(0, -32)
+
+[node name="stalk2" type="Sprite2D" parent="."]
+texture = ExtResource("2_qmeo2")
+offset = Vector2(3, -14)
+
+[node name="sprout" type="Sprite2D" parent="."]
+texture = ExtResource("4_ou7ei")
+offset = Vector2(-40, -70)
+
+[node name="head" type="Sprite2D" parent="."]
+texture = ExtResource("3_ew5cx")
+offset = Vector2(0, -65)
+
+[node name="mouth" type="Sprite2D" parent="."]
+texture = ExtResource("5_1ywgg")
+offset = Vector2(42, -73)
+
+[node name="frontleaf" type="Sprite2D" parent="."]
+texture = ExtResource("9_i4m0d")
+offset = Vector2(5, -2)
+
+[node name="frontleaf2" type="Sprite2D" parent="."]
+texture = ExtResource("10_1hktw")
+offset = Vector2(-23, 6)
+
+[node name="frontleaf3" type="Sprite2D" parent="."]
+texture = ExtResource("11_wautb")
+offset = Vector2(40, -5)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -75)
+shape = SubResource("SegmentShape2D_jt4bf")
+
+[node name="Timer" type="Timer" parent="."]

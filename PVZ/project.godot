@@ -11,12 +11,12 @@ config_version=5
 [application]
 
 config/name="PVZ"
-run/main_scene="res://scene/启动界面.tscn"
+run/main_scene="res://scene/panel/启动界面.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 
 [autoload]
 
-SunNum="*res://script/SunNum.gd"
+SunNum="*res://script/util/SunNum.gd"
 
 [display]
 
