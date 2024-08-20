@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://brg0kjhjtiaak"]
+
+[ext_resource type="Texture2D" uid="uid://0libai0v5u2s" path="res://res/ico/ShovelBank.png" id="1_ln2bc"]
+[ext_resource type="Texture2D" uid="uid://boe2jem04clrc" path="res://res/ico/Shovel.png" id="2_r53qp"]
+
+[node name="道具栏" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ln2bc")
+centered = false
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -5.0
+offset_top = -3.0
+offset_right = 75.0
+offset_bottom = 77.0
+texture_normal = ExtResource("2_r53qp")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb86pnkgc3vip"]
+
+[ext_resource type="Script" path="res://script/启动界面.gd" id="1_3igor"]
+[ext_resource type="Texture2D" uid="uid://f6nvi1n71qkx" path="res://res/img/titlescreen.png" id="1_3xsqk"]
+[ext_resource type="Texture2D" uid="uid://bi63r0wiiph34" path="res://res/ico/LoadBar-dirt.png" id="3_i566n"]
+
+[node name="启动界面" type="Node2D"]
+script = ExtResource("1_3igor")
+
+[node name="Titlescreen" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_3xsqk")
+centered = false
+
+[node name="Btn_Start" type="TextureButton" parent="."]
+offset_left = 249.0
+offset_top = 513.0
+offset_right = 570.0
+offset_bottom = 566.0
+texture_normal = ExtResource("3_i566n")
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[connection signal="button_down" from="Btn_Start" to="." method="slot_Title_Main"]
