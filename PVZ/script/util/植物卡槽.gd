@@ -7,4 +7,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$SeedBank/Lbl_SunNum.text = str(SunNum.SunNum)
+	$SeedBank/Lbl_SunNum.text = str(Data.SunNum)

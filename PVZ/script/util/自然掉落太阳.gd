@@ -1,7 +1,6 @@
 extends Node2D
 @export var Sun_X=0
 @export var Sun_Y=0
-@onready var sun_bank : Sprite2D = $SunBank
 
 var sun_begin:int=50
 var sun_num:int=50
@@ -21,11 +20,11 @@ func _process(delta:float)->void:
 
 
 func kill_self():
-	SunNum.SunNum += 50
+	Data.SunNum += 50
 	queue_free()
 
 
-func slot_Sun_Clicked():
+func slot_Sun_Hover():
 	var tween = get_tree().create_tween()
-	tween.tween_property(self, "position", Vector2(80, 80), 0.5).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(self, "position", Vector2(50, 35), 0.5).set_ease(Tween.EASE_IN_OUT)
 	tween.connect("finished", kill_self)

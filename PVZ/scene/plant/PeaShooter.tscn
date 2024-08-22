@@ -32,6 +32,7 @@ texture = ExtResource("3_foprs")
 offset = Vector2(0, -10)
 
 [node name="stalk" type="Sprite2D" parent="."]
+position = Vector2(-1, 2)
 texture = ExtResource("1_05kaf")
 offset = Vector2(0, -32)
 
@@ -44,10 +45,13 @@ texture = ExtResource("4_ou7ei")
 offset = Vector2(-40, -70)
 
 [node name="head" type="Sprite2D" parent="."]
+position = Vector2(1, 3)
+scale = Vector2(1, 1.00769)
 texture = ExtResource("3_ew5cx")
 offset = Vector2(0, -65)
 
 [node name="mouth" type="Sprite2D" parent="."]
+position = Vector2(0, 2)
 texture = ExtResource("5_1ywgg")
 offset = Vector2(42, -73)
 

@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.2", "Mobile")
 
 [autoload]
 
-SunNum="*res://script/util/SunNum.gd"
+Data="*res://script/util/data.gd"
 
 [display]
 

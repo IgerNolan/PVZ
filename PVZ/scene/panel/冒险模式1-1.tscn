@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cyxk5512yw7h7"]
+[gd_scene load_steps=19 format=3 uid="uid://cyxk5512yw7h7"]
 
 [ext_resource type="Texture2D" uid="uid://cf8aha34k6uav" path="res://res/img/background1.png" id="1_bcw77"]
 [ext_resource type="Script" path="res://script/panel/冒险模式1-1.gd" id="1_lm5h2"]
@@ -8,11 +8,48 @@
 [ext_resource type="PackedScene" uid="uid://dg33g83uge20p" path="res://scene/plant/PeaShooter.tscn" id="6_q1xkq"]
 [ext_resource type="PackedScene" uid="uid://dnrh3dunj0q0b" path="res://scene/util/卡片模板.tscn" id="7_w4m55"]
 [ext_resource type="Texture2D" uid="uid://pyonsyx4qx1m" path="res://res/card/PeaShooter.png" id="8_g3l4o"]
+[ext_resource type="Script" path="res://script/card/cardRes.gd" id="8_t57uh"]
 [ext_resource type="Texture2D" uid="uid://1raak0rmynmm" path="res://res/card/PeaShooter-drag.png" id="9_sc0bt"]
-[ext_resource type="Texture2D" uid="uid://f7hpp0twd3vp" path="res://res/ico/SeedPacket.png" id="11_hkccm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vfqxd"]
 size = Vector2(50, 600)
+
+[sub_resource type="Resource" id="Resource_pwg08"]
+script = ExtResource("8_t57uh")
+cardID = 1
+sunCost = 100
+cardPic = ExtResource("8_g3l4o")
+dragPic = ExtResource("9_sc0bt")
+
+[sub_resource type="Resource" id="Resource_8hkhj"]
+script = ExtResource("8_t57uh")
+cardID = 0
+sunCost = 0
+
+[sub_resource type="Resource" id="Resource_uo88u"]
+script = ExtResource("8_t57uh")
+cardID = 0
+sunCost = 0
+
+[sub_resource type="Resource" id="Resource_jkvwf"]
+script = ExtResource("8_t57uh")
+cardID = 0
+sunCost = 0
+
+[sub_resource type="Resource" id="Resource_cotp5"]
+script = ExtResource("8_t57uh")
+cardID = 0
+sunCost = 0
+
+[sub_resource type="Resource" id="Resource_o6ht2"]
+script = ExtResource("8_t57uh")
+cardID = 0
+sunCost = 0
+
+[sub_resource type="Resource" id="Resource_d5d73"]
+script = ExtResource("8_t57uh")
+cardID = 0
+sunCost = 0
 
 [node name="冒险模式1-1" type="Node2D"]
 script = ExtResource("1_lm5h2")
@@ -51,10 +88,7 @@ offset_left = -15.0
 offset_top = -14.0
 offset_right = 36.0
 offset_bottom = 59.0
-cardPic = ExtResource("8_g3l4o")
-dragPic = ExtResource("9_sc0bt")
-cardID = 1
-sunCost = 100
+res_card = SubResource("Resource_pwg08")
 
 [node name="向日葵" parent="植物卡片" instance=ExtResource("7_w4m55")]
 offset_left = 36.0
@@ -62,33 +96,7 @@ offset_top = -14.0
 offset_right = 87.0
 offset_bottom = 59.0
 focus_neighbor_left = NodePath("../豌豆射手")
-dragPic = ExtResource("11_hkccm")
-cardID = 2
-sunCost = 50
-
-[node name="7" parent="植物卡片" instance=ExtResource("7_w4m55")]
-offset_left = 291.0
-offset_top = -14.0
-offset_right = 342.0
-offset_bottom = 59.0
-focus_neighbor_left = NodePath("../4")
-dragPic = ExtResource("11_hkccm")
-
-[node name="6" parent="植物卡片" instance=ExtResource("7_w4m55")]
-offset_left = 240.0
-offset_top = -14.0
-offset_right = 291.0
-offset_bottom = 59.0
-focus_neighbor_left = NodePath("../4")
-dragPic = ExtResource("11_hkccm")
-
-[node name="5" parent="植物卡片" instance=ExtResource("7_w4m55")]
-offset_left = 189.0
-offset_top = -14.0
-offset_right = 240.0
-offset_bottom = 59.0
-focus_neighbor_left = NodePath("../4")
-dragPic = ExtResource("11_hkccm")
+res_card = SubResource("Resource_8hkhj")
 
 [node name="3" parent="植物卡片" instance=ExtResource("7_w4m55")]
 offset_left = 87.0
@@ -96,7 +104,7 @@ offset_top = -14.0
 offset_right = 138.0
 offset_bottom = 59.0
 focus_neighbor_left = NodePath(".")
-dragPic = ExtResource("11_hkccm")
+res_card = SubResource("Resource_uo88u")
 
 [node name="4" parent="植物卡片" instance=ExtResource("7_w4m55")]
 offset_left = 138.0
@@ -104,4 +112,28 @@ offset_top = -14.0
 offset_right = 189.0
 offset_bottom = 59.0
 focus_neighbor_left = NodePath("../向日葵")
-dragPic = ExtResource("11_hkccm")
+res_card = SubResource("Resource_jkvwf")
+
+[node name="5" parent="植物卡片" instance=ExtResource("7_w4m55")]
+offset_left = 189.0
+offset_top = -14.0
+offset_right = 240.0
+offset_bottom = 59.0
+focus_neighbor_left = NodePath("../4")
+res_card = SubResource("Resource_cotp5")
+
+[node name="6" parent="植物卡片" instance=ExtResource("7_w4m55")]
+offset_left = 240.0
+offset_top = -14.0
+offset_right = 291.0
+offset_bottom = 59.0
+focus_neighbor_left = NodePath("../4")
+res_card = SubResource("Resource_o6ht2")
+
+[node name="7" parent="植物卡片" instance=ExtResource("7_w4m55")]
+offset_left = 291.0
+offset_top = -14.0
+offset_right = 342.0
+offset_bottom = 59.0
+focus_neighbor_left = NodePath("../4")
+res_card = SubResource("Resource_d5d73")
