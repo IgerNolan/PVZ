@@ -14,4 +14,4 @@ offset_bottom = 39.0
 pivot_offset = Vector2(39, 39)
 texture_normal = ExtResource("1_0aakx")
 
-[connection signal="button_down" from="TextureButton" to="." method="slot_Sun_Clicked"]
+[connection signal="mouse_entered" from="TextureButton" to="." method="slot_Sun_Hover"]

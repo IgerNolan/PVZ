@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cyxk5512yw7h7"]
+[gd_scene load_steps=12 format=3 uid="uid://cyxk5512yw7h7"]
 
 [ext_resource type="Texture2D" uid="uid://cf8aha34k6uav" path="res://res/img/background1.png" id="1_bcw77"]
 [ext_resource type="Script" path="res://script/panel/冒险模式1-1.gd" id="1_lm5h2"]
@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://brg0kjhjtiaak" path="res://scene/util/道具栏.tscn" id="3_fk43o"]
 [ext_resource type="PackedScene" uid="uid://hp6spsr54pej" path="res://scene/util/阳光计时器.tscn" id="5_glyy2"]
 [ext_resource type="PackedScene" uid="uid://dg33g83uge20p" path="res://scene/plant/PeaShooter.tscn" id="6_q1xkq"]
+[ext_resource type="PackedScene" uid="uid://dnrh3dunj0q0b" path="res://scene/util/卡片模板.tscn" id="7_w4m55"]
+[ext_resource type="Texture2D" uid="uid://pyonsyx4qx1m" path="res://res/card/PeaShooter.png" id="8_g3l4o"]
+[ext_resource type="Texture2D" uid="uid://1raak0rmynmm" path="res://res/card/PeaShooter-drag.png" id="9_sc0bt"]
+[ext_resource type="Texture2D" uid="uid://f7hpp0twd3vp" path="res://res/ico/SeedPacket.png" id="11_hkccm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vfqxd"]
 size = Vector2(50, 600)
@@ -27,8 +31,8 @@ shape = SubResource("RectangleShape2D_vfqxd")
 [node name="植物卡槽" parent="." instance=ExtResource("2_i36uw")]
 position = Vector2(10, 0)
 
-[node name="道具栏" parent="植物卡槽" instance=ExtResource("3_fk43o")]
-position = Vector2(446, 0)
+[node name="道具栏" parent="." instance=ExtResource("3_fk43o")]
+position = Vector2(456, 0)
 
 [node name="阳光计时器" parent="." instance=ExtResource("5_glyy2")]
 
@@ -38,3 +42,66 @@ position = Vector2(446, 0)
 
 [node name="Pea_shooter" parent="." instance=ExtResource("6_q1xkq")]
 position = Vector2(66, 235)
+
+[node name="植物卡片" type="Node2D" parent="."]
+position = Vector2(104, 21)
+
+[node name="豌豆射手" parent="植物卡片" instance=ExtResource("7_w4m55")]
+offset_left = -15.0
+offset_top = -14.0
+offset_right = 36.0
+offset_bottom = 59.0
+cardPic = ExtResource("8_g3l4o")
+dragPic = ExtResource("9_sc0bt")
+cardID = 1
+sunCost = 100
+
+[node name="向日葵" parent="植物卡片" instance=ExtResource("7_w4m55")]
+offset_left = 36.0
+offset_top = -14.0
+offset_right = 87.0
+offset_bottom = 59.0
+focus_neighbor_left = NodePath("../豌豆射手")
+dragPic = ExtResource("11_hkccm")
+cardID = 2
+sunCost = 50
+
+[node name="7" parent="植物卡片" instance=ExtResource("7_w4m55")]
+offset_left = 291.0
+offset_top = -14.0
+offset_right = 342.0
+offset_bottom = 59.0
+focus_neighbor_left = NodePath("../4")
+dragPic = ExtResource("11_hkccm")
+
+[node name="6" parent="植物卡片" instance=ExtResource("7_w4m55")]
+offset_left = 240.0
+offset_top = -14.0
+offset_right = 291.0
+offset_bottom = 59.0
+focus_neighbor_left = NodePath("../4")
+dragPic = ExtResource("11_hkccm")
+
+[node name="5" parent="植物卡片" instance=ExtResource("7_w4m55")]
+offset_left = 189.0
+offset_top = -14.0
+offset_right = 240.0
+offset_bottom = 59.0
+focus_neighbor_left = NodePath("../4")
+dragPic = ExtResource("11_hkccm")
+
+[node name="3" parent="植物卡片" instance=ExtResource("7_w4m55")]
+offset_left = 87.0
+offset_top = -14.0
+offset_right = 138.0
+offset_bottom = 59.0
+focus_neighbor_left = NodePath(".")
+dragPic = ExtResource("11_hkccm")
+
+[node name="4" parent="植物卡片" instance=ExtResource("7_w4m55")]
+offset_left = 138.0
+offset_top = -14.0
+offset_right = 189.0
+offset_bottom = 59.0
+focus_neighbor_left = NodePath("../向日葵")
+dragPic = ExtResource("11_hkccm")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnrh3dunj0q0b"]
+
+[ext_resource type="Texture2D" uid="uid://f7hpp0twd3vp" path="res://res/ico/SeedPacket.png" id="1_47j4q"]
+[ext_resource type="Script" path="res://script/util/卡片模板.gd" id="1_guam2"]
+
+[node name="卡片模板" type="TextureButton"]
+offset_right = 51.0
+offset_bottom = 73.0
+texture_normal = ExtResource("1_47j4q")
+script = ExtResource("1_guam2")
+
+[node name="card" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 13.0
+offset_right = 38.0
+offset_bottom = 43.0
+scale = Vector2(1.10526, 1.10526)
+
+[node name="Lbl_sunCost" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 49.0
+offset_right = 33.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 2
+vertical_alignment = 1
