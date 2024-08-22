@@ -15,5 +15,7 @@ class_name Plant
 @export var canPlantOnWaterPot : bool
 
 @export var canPlantOnPlant : bool
+@export var canPlantOnMushroom : bool
+
 @export var canPlantOnLilyPad : bool
 @export var canPlantOnW : bool

@@ -1,4 +1,4 @@
 extends Node
 
-var SunNum = 50
+var SunNum = 0
 var currentCardID = 0

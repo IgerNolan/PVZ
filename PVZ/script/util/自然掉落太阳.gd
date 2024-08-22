@@ -1,28 +1,22 @@
 extends Node2D
-@export var Sun_X=0
-@export var Sun_Y=0
+@export var Sun_X = 0
+@export var Sun_Y = 0
 
-var sun_begin:int=50
-var sun_num:int=50
-# Called when the node enters the scene tree for the first time.
-func _ready()->void:
-	sun_num=sun_begin
+var sun_begin : int = 50
+var sun_cost : int = 50
 
+func _ready() -> void:
+	Data.SunNum = sun_begin
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta:float)->void:
-	pass
-	
+func _process(delta:float) -> void:
 	rotation_degrees += 1
-	position.x=Sun_X
-	if position.y<Sun_Y :
+	position.x = Sun_X
+	if position.y < Sun_Y :
 		position.y += 0.5
 
-
 func kill_self():
-	Data.SunNum += 50
+	Data.SunNum += sun_cost
 	queue_free()
-
 
 func slot_Sun_Hover():
 	var tween = get_tree().create_tween()
